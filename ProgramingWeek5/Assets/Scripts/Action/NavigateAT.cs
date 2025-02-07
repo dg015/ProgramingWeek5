@@ -12,6 +12,8 @@ namespace NodeCanvas.Tasks.Actions {
 		
 		public BBParameter<Vector3> targetPosition;
 		public float sampleRate;
+		public float sampleDistance;
+
 
         private NavMeshAgent navAgent;
         private float timeSinceLastSample = 0f;
@@ -33,7 +35,24 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			
+			//set where the navmesh agent is moving
+			timeSinceLastSample += Time.deltaTime;
+
+			if (timeSinceLastSample > sampleRate)
+			{
+				if (lastDestination != targetPosition.value)
+				{
+					lastDestination = targetPosition.value;
+
+					NavMeshHit navMeshHit;
+					NavMesh.SamplePosition(targetPosition.value, out navMeshHit, sampleDistance, NavMesh.AllAreas);
+;					
+					
+					
+					navAgent.SetDestination(targetPosition.value);
+				}
+
+			}
 		}
 
 		//Called when the task is disabled.
