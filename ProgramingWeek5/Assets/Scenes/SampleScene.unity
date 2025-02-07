@@ -635,8 +635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"targetPosition":{"_name":"Spoopy
-    Target","_targetVariableID":"2494b076-1946-4c9d-a50a-ff19e1197a13"},"speed":5.0,"radius":50.0,"$type":"NodeCanvas.Tasks.Actions.OrbitAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Orbit","_position":{"x":224.9017,"y":585.1609},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[{"targetPosition":{"_name":"Target
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"targetPosition":{"_name":"Target
+    position","_targetVariableID":"d6077c5a-3135-4935-b9f8-0a709766d365"},"target":1,"speed":5.0,"radius":8.0,"$type":"NodeCanvas.Tasks.Actions.OrbitAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Orbit","_position":{"x":173.8824,"y":573.7075},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[{"targetPosition":{"_name":"Target
     position","_targetVariableID":"d6077c5a-3135-4935-b9f8-0a709766d365"},"fleeTargetTrasform":1,"fleeDistance":5.0,"$type":"NodeCanvas.Tasks.Actions.FleeAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Flee","_position":{"x":36.44241,"y":463.3392},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[{"targetTransform":1,"targetPosition":{"_name":"Target
     position","_targetVariableID":"d6077c5a-3135-4935-b9f8-0a709766d365"},"$type":"NodeCanvas.Tasks.Actions.SeekAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Seek","_position":{"x":-37.0,"y":349.0},"$type":"NodeCanvas.StateMachines.ActionState"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"targetPosition":{"_name":"Target
     position","_targetVariableID":"d6077c5a-3135-4935-b9f8-0a709766d365"},"sampleRate":0.25,"sampleDistance":5.0,"$type":"NodeCanvas.Tasks.Actions.NavigateAT"}]},"_position":{"x":172.0,"y":340.9588},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
@@ -2164,7 +2164,7 @@ Transform:
   m_GameObject: {fileID: 2004367595}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.65, y: 0.45, z: 0.05}
+  m_LocalPosition: {x: 0.14, y: 0.45, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
