@@ -607,12 +607,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"Target position":{"_name":"Target position","_id":"d6077c5a-3135-4935-b9f8-0a709766d365","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Spoopy
+    Target":{"_value":1,"_name":"Spoopy Target","_id":"2494b076-1946-4c9d-a50a-ff19e1197a13","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
-  _objectReferences: []
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 2134762803}
   _serializedVariables:
   - _json: '{"_name":"Target position","_id":"d6077c5a-3135-4935-b9f8-0a709766d365","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
+  - _json: '{"_value":1,"_name":"Spoopy Target","_id":"2494b076-1946-4c9d-a50a-ff19e1197a13","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 2134762803}
 --- !u!114 &512824060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,14 +635,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.SeekAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Seek","_position":{"x":-37.0,"y":349.0},"$type":"NodeCanvas.StateMachines.ActionState"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.NavigateAT"}]},"_position":{"x":172.0,"y":342.0},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
-  _boundGraphObjectReferences: []
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"targetPosition":{"_name":"Spoopy
+    Target","_targetVariableID":"2494b076-1946-4c9d-a50a-ff19e1197a13"},"speed":5.0,"radius":50.0,"$type":"NodeCanvas.Tasks.Actions.OrbitAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Orbit","_position":{"x":224.9017,"y":585.1609},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[{"targetPosition":{"_name":"Target
+    position","_targetVariableID":"d6077c5a-3135-4935-b9f8-0a709766d365"},"fleeTargetTrasform":1,"fleeDistance":5.0,"$type":"NodeCanvas.Tasks.Actions.FleeAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Flee","_position":{"x":36.44241,"y":463.3392},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[{"targetTransform":1,"targetPosition":{"_name":"Target
+    position","_targetVariableID":"d6077c5a-3135-4935-b9f8-0a709766d365"},"$type":"NodeCanvas.Tasks.Actions.SeekAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Seek","_position":{"x":-37.0,"y":349.0},"$type":"NodeCanvas.StateMachines.ActionState"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"targetPosition":{"_name":"Target
+    position","_targetVariableID":"d6077c5a-3135-4935-b9f8-0a709766d365"},"sampleRate":0.25,"sampleDistance":5.0,"$type":"NodeCanvas.Tasks.Actions.NavigateAT"}]},"_position":{"x":172.0,"y":340.9588},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 2004367596}
   _boundGraphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 308.12375, y: 114.33624}
-    _zoomFactor: 0.45149052
+    _translation: {x: 99, y: -79}
+    _zoomFactor: 0.9604196
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -2322,6 +2337,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 822137373}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2134762802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134762803}
+  m_Layer: 0
+  m_Name: Spoopy Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2134762803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134762802}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.014969, y: -5.0110917, z: -4.4690733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2332,3 +2378,4 @@ SceneRoots:
   - {fileID: 512824058}
   - {fileID: 2004367596}
   - {fileID: 822137373}
+  - {fileID: 2134762803}
