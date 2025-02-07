@@ -1,6 +1,7 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-
+using UnityEngine;
+using UnityEngine.AI;
 
 namespace NodeCanvas.Tasks.Actions {
 
@@ -8,7 +9,18 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
+		
+		public BBParameter<Vector3> targetPosition;
+		public float sampleRate;
+
+        private NavMeshAgent navAgent;
+        private float timeSinceLastSample = 0f;
+		private Vector3 lastDestination;
+
 		protected override string OnInit() {
+			navAgent = agent.GetComponent<NavMeshAgent>();
+
+
 			return null;
 		}
 
@@ -16,7 +28,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			EndAction(true);
+			
 		}
 
 		//Called once per frame while the action is active.
