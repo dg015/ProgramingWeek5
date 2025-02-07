@@ -45,10 +45,13 @@ namespace NodeCanvas.Tasks.Actions {
 					lastDestination = targetPosition.value;
 
 					NavMeshHit navMeshHit;
-					NavMesh.SamplePosition(targetPosition.value, out navMeshHit, sampleDistance, NavMesh.AllAreas);
-;					
+					bool foundPoint = NavMesh.SamplePosition(targetPosition.value, out navMeshHit, sampleDistance, NavMesh.AllAreas);
 					
-					
+					if(foundPoint)
+					{
+						navAgent.SetDestination(targetPosition.value);
+					}
+
 					navAgent.SetDestination(targetPosition.value);
 				}
 
